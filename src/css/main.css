@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --spacing-100: 8px;
+    --spacing-200: 16px;
+    --spacing-300: 24px;
+    --spacing-400: 32px;
+    --spacing-700: 56px;
+    --spacing-100: 80px;
+    --spacing-1300: 104px;
+    --spacing-1600: 128px;
+    --spacing-2000: 160px;
+    --spacing-2200: 176px;
+    --spacing-2300: 184px;
+
+    --color-white: #fff;
+    --color-black: #000;
+    --color-grey-950: #08070B;
+    --color-grey-900: #14131B;
+    --color-grey-850: #18171F;
+    --color-grey-800: #24232C;
+    --color-grey-700: #54535B;
+    --color-grey-600: #817D92;
+    --color-grey-200: #E6E5EA;
+    --color-green: #A4FFAF;
+    --color-yellow: #F8CD65; 
+    --color-orange: #FB7C58;
+    --color-red: #F64A4A;
+    --linea-gradient: linear-gradient(to right, #14131B, #08070B);
+}
+
+@media screen and (min-width: 800px) {
+
+    /* desktop, tablet */
+    .text-title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    /* desktop, tablet */
+    .genrate-password {
+        font-size: 32px;
+        line-height: 42px;
+    }
+}
+
+body {
+    font-family: "JetBrains Mono", monospace;
+    font-weight: bold;
+    background-color: var(--color-grey-950);
+    height: 100vh;
+}
+
+/* mobile */
+.text-title {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.genrate-password {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+
+p .text-three {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+p .text-four {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+
+
+/* 
+@font-face {
+    font-family: ;
+    src: url();
+} */
