@@ -34,26 +34,12 @@
     --linea-gradient: linear-gradient(to right, #14131B, #08070B);
 }
 
-@media screen and (min-width: 800px) {
-
-    /* desktop, tablet */
-    .text-title {
-        font-size: 24px;
-        line-height: 32px;
-    }
-
-    /* desktop, tablet */
-    .genrate-password {
-        font-size: 32px;
-        line-height: 42px;
-    }
-}
-
 body {
     font-family: "JetBrains Mono", monospace;
     font-weight: bold;
     background-color: var(--color-grey-950);
     height: 100vh;
+    align-content: center;
 }
 
 input {
@@ -88,11 +74,21 @@ p .text-four {
     line-height: 20px;
 }
 
+.length-font {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.password-font {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+
 .generator {
     width: 90%;
     margin-inline: auto;
     height: auto;
-    border: 2px solid greenyellow;
 }
 
 
@@ -112,11 +108,14 @@ p .text-four {
 }
 
 #password {
+    font-size: 32px;
+    line-height: 42px;
     background-color: transparent;
-    border: none;
     outline: none;
+    border: none;
     height: 100%;
-    width: 200px;
+    max-width: 80%;
+    color: var(--color-grey-200);
 }
 
 #password::placeholder {
@@ -127,6 +126,8 @@ p .text-four {
 .copied__img {
     display: block;
     cursor: pointer;
+    width: 21px;
+    height: 24px;
 }
 
 .generator__settings {
@@ -146,6 +147,8 @@ p .text-four {
 }
 
 .number {
+    font-size: 24px;
+    line-height: 32px;
     color: var(--color-green);
 }
 
@@ -156,6 +159,7 @@ p .text-four {
     background: linear-gradient(to right, #A4FFAF 0%, #A4FFAF 33.33%, #08070B  33.33%, #08070B 100%);
 }
 
+/* Reference to the circle or rectangle */
 input[type="range"]::-webkit-slider-thumb,
 input[type="range"]::-moz-range-thumb {
   appearance: none;
@@ -181,13 +185,37 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .generator__options li input {
+    appearance: none;
+    position: relative;
     height: 20px;
     width: 20px;
     accent-color: var(--color-green);
+    background-color: var(--color-grey-950);
+    cursor: pointer;
+    border: none
 }
+
+.generator__options li input:hover {
+    outline: 2px solid var(--color-green);
+}
+
+.generator__options li input:checked {
+    background-color: var(--color-green);
+}
+
+.generator__options li input:checked::before {
+    position: absolute;
+    content: '✔️';
+    top: 0px;
+    left: 1px;
+
+}
+
 
 .option__label {
     color: var(--color-grey-200);
+    font-size: 16px;
+    line-height: 20px;
 }
 
 .result {
@@ -201,6 +229,8 @@ input[type="range"]::-moz-range-thumb {
 
 .strength {
     color: var(--color-grey-600);
+    font-size: 16px;
+    line-height: 20px;
 }
 
 .result__graphic {
@@ -227,24 +257,104 @@ input[type="range"]::-moz-range-thumb {
 
 .generate {
     margin-top: 32px;
-    border: 2px solid var(--color-green);
     padding: 24px ;
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
+    border: 1px solid;
     gap: 16px;
+    background-color: var(--color-green);
+    cursor: pointer;
+}
+
+.generate:hover {
+    background-color: transparent;
+    border-color: var(--color-green);
 }
 
 .generate__text {
+    color: var(--color-grey-800);
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.generate:hover .generate__text {
     color: var(--color-green);
 }
 
 .generate__arrow {
     display: inline-block;
-    width: 20px;
-    height: 12px;
     object-fit: contain;
+    vertical-align: center;
+}
+
+.generate:hover .generate__arrow {
+    color: var(--color-green);
+} 
+
+
+
+
+
+.copied__img {
+    display: block;
+    color: var(--color-green);
+    cursor: pointer;
+}
+
+.copied__img:hover {
+    color: #fff;
+}
+
+
+@media screen and (min-width: 768px) {
+    /* desktop, tablet */
+    .text-title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .password-font {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    /* desktop, tablet */
+    .genrate-password {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .generator {
+        width: 540px;
+    }
+
+    .length-font {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .number {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .option__label {
+        color: var(--color-grey-200);
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .strength {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .generate__text {
+        font-size: 18px;
+        line-height: 24px;
+    }
 }
 
 /* JAVASCRIPT */
