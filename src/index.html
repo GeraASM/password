@@ -11,39 +11,60 @@
 <body>
     <main class="main">
         <div class="generator">
-            <p class="generador__text">Password Generator</p>
+            <p class="generador__text text-four">Password Generator</p>
             <section class="generator__password">
-                <input id="password" type="text" placeholder="P4$5W0rD!">
+                <input id="password" class="genrate-password" type="text" placeholder="P4$5W0rD!">
                 <span class="copied">COPIED</span>
-                <svg width="21" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M20.341 3.091 17.909.659A2.25 2.25 0 0 0 16.319 0H8.25A2.25 2.25 0 0 0 6 2.25V4.5H2.25A2.25 2.25 0 0 0 0 6.75v15A2.25 2.25 0 0 0 2.25 24h10.5A2.25 2.25 0 0 0 15 21.75V19.5h3.75A2.25 2.25 0 0 0 21 17.25V4.682a2.25 2.25 0 0 0-.659-1.591ZM12.469 21.75H2.53a.281.281 0 0 1-.281-.281V7.03a.281.281 0 0 1 .281-.281H6v10.5a2.25 2.25 0 0 0 2.25 2.25h4.5v1.969a.282.282 0 0 1-.281.281Zm6-4.5H8.53a.281.281 0 0 1-.281-.281V2.53a.281.281 0 0 1 .281-.281H13.5v4.125c0 .621.504 1.125 1.125 1.125h4.125v9.469a.282.282 0 0 1-.281.281Zm.281-12h-3v-3h.451c.075 0 .147.03.2.082L18.667 4.6a.283.283 0 0 1 .082.199v.451Z" fill="#A4FFAF"/></svg>
-            </svction>
-            <section class="generator__settings">
+                <svg class="copied__img" width="21" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M20.341 3.091 17.909.659A2.25 2.25 0 0 0 16.319 0H8.25A2.25 2.25 0 0 0 6 2.25V4.5H2.25A2.25 2.25 0 0 0 0 6.75v15A2.25 2.25 0 0 0 2.25 24h10.5A2.25 2.25 0 0 0 15 21.75V19.5h3.75A2.25 2.25 0 0 0 21 17.25V4.682a2.25 2.25 0 0 0-.659-1.591ZM12.469 21.75H2.53a.281.281 0 0 1-.281-.281V7.03a.281.281 0 0 1 .281-.281H6v10.5a2.25 2.25 0 0 0 2.25 2.25h4.5v1.969a.282.282 0 0 1-.281.281Zm6-4.5H8.53a.281.281 0 0 1-.281-.281V2.53a.281.281 0 0 1 .281-.281H13.5v4.125c0 .621.504 1.125 1.125 1.125h4.125v9.469a.282.282 0 0 1-.281.281Zm.281-12h-3v-3h.451c.075 0 .147.03.2.082L18.667 4.6a.283.283 0 0 1 .082.199v.451Z" fill="#A4FFAF"/></svg>
+            </section>
+             <section class="generator__settings">
                 <div class="generador__content">
-                    <label for="longitud" class="generator__length">Character Length</label>
-                    <span class="number">0</span>
+                    <label for="longitud" class="generator__length text-four">Character Length</label>
+                    <span class="number genrate-password">10</span>
                 </div>
-                <input id="range" type="range" id="longitud" min="0" max="30" value="10">
-                <div class="generator__options">
-                    <input id="uppercase" type="checkbox" name="character"><label for="uppercase">Include Uppercase Letters</label>
-                    <input id="lowercase" type="checkbox" name="character"><label for="lowercase">Include Lowercase Letters</label>
-                    <input id="numbers" type="checkbox" name="character"><label for="numbers">Include Numbers</label>
-                    <input id="symbols" type="checkbox" name="character"><label for="symbols">Include Symbols</label>
-                </div>
+                <input id="range" type="range" id="longitud" min="0" max="30" value="10" step="1">
+                <ul class="generator__options">
+                    <li>
+                        <input id="uppercase" type="checkbox" name="character"><label class="option__label text-three " for="uppercase">Include Uppercase Letters</label>
+
+                    </li>
+                    <li>
+                        
+                        <input id="lowercase" type="checkbox" name="character"><label class="option__label text-three " for="lowercase">Include Lowercase Letters</label>
+                    </li>
+                    <li>
+                        <input id="numbers" type="checkbox" name="character"><label class="option__label text-three " for="numbers">Include Numbers</label>
+
+                    </li>
+                    <li>
+                        <input id="symbols" type="checkbox" name="character"><label class="option__label text-three " for="symbols">Include Symbols</label>
+
+                    </li>
+                </ul>
+
+
                 <div class="result">
-                    <p class="strength">STRENGTH</p>
-                    <span class="grade">LOW</span>
-                    <div class="bars">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
+                    <p class="strength text-three">STRENGTH</p>
+                    <div class="result__graphic">
+                        <span class="grade genrate-password">LOW</span>
+                        <div class="bars">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="generate">
-                    <p>GENERATE</p>
-                    <img src="./assets/images/icon-arrow-right.svg" alt="arrow">
-                </div>
-            </section>
+                       <p class="generate__text text-three">GENERATE</p>
+                       <img class="generate__arrow" src="./assets/images/icon-arrow-right.svg" alt="arrow">
+                   </div> 
+             </section>
+
+            <!--
+
+            
+                -->
         </div>
     </main>
     <!-- 
@@ -53,6 +74,6 @@
     Strength
 
     Generate -->
-
+    <script src="./js/main.js"></script>
 </body>
 </html>
